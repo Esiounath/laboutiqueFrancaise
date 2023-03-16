@@ -1,0 +1,18 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+{% block content_title %}Utilisateurs inscrits{% endblock %}
+{% block main %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Derniers utilisateurs inscrits</h5>
+                        {% for user in users %}
+                            <ul class="list-group">
+                            <label>Prénom:<li class="list-group-item list-group-item-primary">{{ user.prenom }}</li></label>
+                            <label>Nom:<li class="list-group-item list-group-item-primary">{{ user.nom }}</li></label>
+                            <label>Email:<li class="list-group-item list-group-item-primary">{{ user.email }}</li></label>
+                            </ul>
+                        {% endfor %}
+                </div>
+            </div>
+        </div>
+{% endblock %}

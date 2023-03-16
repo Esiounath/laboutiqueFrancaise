@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MonCompte{% endblock %}
+
+{% block content %}
+<h1>Mon Compte</h1>
+Bienvenue {% if app.user.Prenom is defined %}
+    {{app.user.Prenom}}
+{% endif %} dans votre compte
+<a href="{{path('app_password_update')}}">Modifiez mon mot de passe</a>
+
+{% endblock %}
