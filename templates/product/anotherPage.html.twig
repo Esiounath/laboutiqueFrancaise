@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos Produits{% endblock %}
+{% block content %}
+      <h1>Nos produits</h1>
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="/uploads/{{product.illustration}}" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">{{product.name}}</h2>
+    <p class="card-text">{{product.subtitle}}</p>
+    <p class="card-text">{{product.description}}</p>
+    <h4 class="card-text">{{product.price}}€</h4>
+    <a href="#" class="btn btn-primary">Ajouter au Panier</a>
+  </div>
+</div>
+{% endblock %}

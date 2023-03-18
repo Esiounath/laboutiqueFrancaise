@@ -42,6 +42,9 @@ class Category
 
         return $this;
     }
+    public function __toString(){
+        return $this->getName();
+    }
 
     /**
      * @return Collection<int, Product>
